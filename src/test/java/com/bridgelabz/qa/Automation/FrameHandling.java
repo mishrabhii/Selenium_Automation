@@ -34,18 +34,12 @@ public class FrameHandling extends BaseClass {
 			driver.switchTo().frame(i);
 			int total = driver.findElements(By.xpath("//iframe[@src='/checkpoint/challengeIframe/AQFO5EYo6sVddAAAAYacZ0N9Tt_JY08iciY2uzvq2wKvScuLBH5oT_4Dv8092L5Pbc_7R2mSMCzT7MdwTO3zArNmnk8wWA?ut=3LtPuktdSYFGE1']")).size();
 			System.out.println(total);
-//			WebElement countries = driver.findElement(By.id("select-register-phone-country"));
-//			countries.click();
-//			Thread.sleep(500);
-//
-//			Select country = new Select(countries);
-//			country.selectByValue("us");
 			driver.findElement(By.name("phoneNumber")).sendKeys("9651094335");
 			driver.switchTo().defaultContent();
 		}
 
-driver.close();
+		driver.close();
 	}
 
 
-	}
+}
