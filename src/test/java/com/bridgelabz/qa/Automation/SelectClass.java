@@ -2,6 +2,12 @@ package com.bridgelabz.qa.Automation;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -12,25 +18,26 @@ import com.bridgelabz.base.BaseClass;
 
 public class SelectClass extends BaseClass {
 
-	@Test(priority=3)
+	@Test(priority=2)
 
 	public void getFacebookTitle () throws InterruptedException, IOException {
-		createAccount();
 		
+		createAccount();
 		String title = driver.getTitle();
 		System.out.println("Title is = "+title);
 		AssertJUnit.assertEquals(title, "Sign up for Facebook | Facebook");
 	}
-	@Test(priority=4)
+	@Test(priority=3)
 
 	public void findFacebookLogo () throws InterruptedException, IOException {
 		createAccount();
 		boolean flag =driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div[1]/img")).isDisplayed();
 		AssertJUnit.assertTrue(flag);
 	}
-	@Test(priority = 1)
+	@Test(priority = 0)
 
 	public void createAccount() throws InterruptedException, IOException {
+		
 		driver.get("https://www.facebook.com/login/");
 		driver.findElement(By.partialLinkText("Sign up")).click();
 		driver.findElement(By.name("firstname")).sendKeys("Abhishek");
@@ -56,9 +63,10 @@ public class SelectClass extends BaseClass {
 		driver.findElements(By.name("sex")).get(1).click();
 		screenshot();
 	}
-	@Test(priority = 2)
+	@Test(priority = 1)
 
 	public void radioButtonIsSelectedOrNot () throws IOException, InterruptedException {
+		
 		createAccount();
 		boolean flag =driver.findElements(By.name("sex")).get(1).isSelected();
 		if (flag == true) {

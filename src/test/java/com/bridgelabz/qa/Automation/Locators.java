@@ -4,8 +4,6 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
-
 import com.bridgelabz.base.BaseClass;
 
 public class Locators extends BaseClass {
@@ -13,8 +11,9 @@ public class Locators extends BaseClass {
 	@Test
 
 	public void checkAllLocators () throws InterruptedException {
-		driver.navigate().to("https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager/5.3.1");
 		
+		driver.get("https://bldev.bridgelabz.com/webinar");
+	
 		driver.findElement(By.id("deftphnumber")).sendKeys("9651094335");
 
 		driver.findElement(By.tagName("input"));
@@ -29,6 +28,9 @@ public class Locators extends BaseClass {
 		element.click();
 		driver.findElement(By.xpath("//*[@id=\"deftdegree\"]")).click();
 		driver.findElement(By.className("anchor-tag")).click();
+		
+		Thread.sleep(1000);
+		driver.navigate().to("https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager/5.3.1");
 
 		driver.findElement(By.linkText("Gradle")).click();
 		

@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="tests">
+<parameter name="browser" value="safari"></parameter>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.bridgelabz.qa.Automation.Locators">
-      <methods>
-      <include name="checkAllLocators"></include>
-      </methods>
-      </class>
-      <class name="com.bridgelabz.base.BaseClass"/>
-      <class name="com.bridgelabz.qa.Automation.FrameHandling"/>
-      <class name="com.bridgelabz.qa.Automation.WindowHandling"/>
       <class name="com.bridgelabz.qa.Automation.Launch_WebinarScreen"/>
-      <class name="com.bridgelabz.qa.Automation.SelectClass">
-      <methods>
-      <include name="createAccount"></include>
-      <include name="findFacebookLogo"></include>
-      <include name="getFacebookTitle"></include>
-      <include name="radioButtonIsSelectedOrNot"></include>
-      </methods>
-      
-      </class>
-      <class name="com.bridgelabz.qa.Automation.JavaScriptExecutor"/>
+       <class name="com.bridgelabz.base.BaseClass"/>
+       <class name="com.bridgelabz.qa.Automation.Locators"/>
+       <class name="com.bridgelabz.qa.Automation.FrameHandling"/>
+       <class name="com.bridgelabz.qa.Automation.WindowHandling"/>
+       <class name="com.bridgelabz.qa.Automation.SelectClass"/>
+       <class name="com.bridgelabz.qa.Automation.JavaScriptExecutor"/> 
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 

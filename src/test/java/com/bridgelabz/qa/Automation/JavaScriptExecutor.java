@@ -16,10 +16,10 @@ public class JavaScriptExecutor extends BaseClass {
 		int  NoOfFrames = Integer.parseInt(executer.executeScript("return window.length").toString());
 		System.out.println("NoOfFrames ="+NoOfFrames);
 
-//		for(int i=0;i<=NoOfFrames;i++) {
-//			System.out.println("Frame Title =" + driver.switchTo().frame(i).getTitle());
-//
-//		}
+		for(int i=0;i<=NoOfFrames;i++) {
+			System.out.println("Frame Title =" + driver.switchTo().frame(i).getTitle());
+
+		}
 		
 		
 		executer.executeScript("window.scrollBy(0,500)");

@@ -1,6 +1,9 @@
 package com.bridgelabz.qa.Automation;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.Set;
 import org.openqa.selenium.By;

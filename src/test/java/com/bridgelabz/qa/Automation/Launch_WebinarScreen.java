@@ -1,7 +1,9 @@
 package com.bridgelabz.qa.Automation;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
+import java.awt.AWTException;
 import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -9,13 +11,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import com.bridgelabz.base.BaseClass;
 
+@Listeners(ReporterListener.class)
 public class Launch_WebinarScreen extends BaseClass {
 	@Test
-	public void webinarScreen() throws InterruptedException {
+	public void webinarScreen() throws InterruptedException, AWTException {
 		
 		driver.get("https://bldev.bridgelabz.com/webinar");
 
@@ -71,7 +72,8 @@ public class Launch_WebinarScreen extends BaseClass {
 		WebElement txt = driver.findElement(By.xpath("//*[@id=\"main-webinar-section\"]/section[1]/div/div[3]"));
 		System.out.println("getting text =" +txt.getText());
 		
-
+		
 	}
+	
 
 }
